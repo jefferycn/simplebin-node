@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.get('/', async (req, res) => {
   const data = await fs.readFile(`${__dirname}/bin/default.txt`);
-  res.setHeader('content-type', 'text/plain');
+  res.setHeader('content-type', 'text/plain; charset=utf-8');
   res.send(data);
 });
 
